@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Paneli</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: #0f0f11; color: #e1e1e6; display: flex; justify-content: center; align-items: center; height: 100vh; padding: 20px; }
+        .container { background-color: #1a1a1e; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); width: 100%; max-width: 480px; text-align: center; border: 1px solid #29292e; }
+        h1 { font-size: 26px; color: #fff; margin-bottom: 4px; }
+        .user-highlight { color: #00adb5; font-size: 22px; font-weight: bold; margin-bottom: 28px; }
+        .info-card { background-color: #0f0f11; border: 1px solid #29292e; border-radius: 8px; padding: 20px; text-align: left; margin-bottom: 24px; }
+        .info-group { margin-bottom: 16px; }
+        .info-group:last-child { margin-bottom: 0; }
+        .title { display: block; color: #7c7c8a; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+        .data-value { display: block; background-color: #1a1a1e; border: 1px solid #29292e; color: #04d361; font-family: 'Consolas', monospace; font-size: 16px; padding: 10px 14px; border-radius: 6px; font-weight: bold; }
+        .btn-exit { display: inline-block; width: 100%; padding: 14px; background-color: #f75a68; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+        .btn-exit:hover { background-color: #c53030; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoşgeldin</h1>
+        <div class="user-highlight">{{ isim }}</div>
+        
+        <div class="info-card">
+            <div class="info-group">
+                <span class="title">Ana Kullanıcı Kimliği</span>
+                <span class="data-value">{{ ana_kimlik }}</span>
+            </div>
+            <div class="info-group">
+                <span class="title">Yedek Kimlik</span>
+                <span class="data-value">{{ yedek_kimlik }}</span>
+            </div>
+        </div>
+        
+        <a href="/cikis" class="btn-exit">Sistem Oturumunu Kapat</a>
+    </div>
+</body>
+</html>
